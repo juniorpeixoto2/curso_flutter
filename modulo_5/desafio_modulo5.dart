@@ -18,16 +18,20 @@ void main() {
   print('Pacientes com mais de 20 anos');
   print('-----------------------------');
 
+  int i = 0;
   for (var paciente in pacientes) {
     List dadosPaciente = paciente.split('|');
 
     int idade = int.parse(dadosPaciente[1]);
 
     if (idade >= 20) {
+      i++;
       print(dadosPaciente[0]);
     }
   }
 
+  print("\n");
+  print("Total de Pacientes com mais de 20 anos: $i");
   print("\n");
   print('Pacientes por família');
   print('-----------------------------');
